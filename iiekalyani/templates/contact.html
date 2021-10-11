@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Contact Us form</title>
+    <link rel="stylesheet" href="static/contact.css">
+    {% comment %} <link rel="shortcut icon" href="static/iie.png" type="image/x-icon"> {% endcomment %}
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h2>Glassmorphism Contact Us form</h2>
+        <form method="post" action="/contact">
+        {% csrf_token %}
+        
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="fname" required="required">
+                    <span class="text">First Name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="lname" required="required">
+                    <span class="text">Last Name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="email" required="required">
+                    <span class="text">Email</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="mobile" required="required">
+                    <span class="text">Mobile</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox textarea">
+                    <textarea name="msg" required="required"></textarea>
+                    <span class="text">Type your message here...</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row100">
+            <div class="col">
+                <input type="submit" value="send">
+            </div>
+        </div>
+        </form>
+    </div>
+    </section>
+</body>
+</html>
